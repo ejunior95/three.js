@@ -2,6 +2,8 @@
 {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 html,
@@ -9,6 +11,7 @@ body
 {
     height: 100vh;
     font-family: 'Poppins';
+    background-color: rgb(24, 24, 24);
 }
 
 .webgl
