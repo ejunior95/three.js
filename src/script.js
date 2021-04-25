@@ -47,7 +47,7 @@ lightWhite.add(pointLight.position, 'z').min(-6).max(6).step(0.01)
 lightWhite.add(pointLight, 'intensity').min(0).max(50).step(0.01)
 
 
-// Light Red
+// Light 02
 
 const pointLight2 = new THREE.PointLight(0xff0000, 2)
 pointLight2.position.set(6,-4.58,-3.65)
@@ -55,29 +55,45 @@ pointLight2.intensity = 3.33
 
 scene.add(pointLight2)
 
-const lightRed = gui.addFolder('Luz Vermelha')
+const light2 = gui.addFolder('Luz 02')
 
-lightRed.add(pointLight2.position, 'y').min(-6).max(6).step(0.01)
-lightRed.add(pointLight2.position, 'x').min(-6).max(6).step(0.01)
-lightRed.add(pointLight2.position, 'z').min(-6).max(6).step(0.01)
-lightRed.add(pointLight2, 'intensity').min(0).max(50).step(0.01)
+light2.add(pointLight2.position, 'y').min(-6).max(6).step(0.01)
+light2.add(pointLight2.position, 'x').min(-6).max(6).step(0.01)
+light2.add(pointLight2.position, 'z').min(-6).max(6).step(0.01)
+light2.add(pointLight2, 'intensity').min(0).max(50).step(0.01)
 
+const light2Color = {
+    color: 0xff0000
+}
 
-// Light Blue
+light2.addColor(light2Color, 'color')
+.onChange(() => {
+    pointLight2.color.set(light2Color.color)
+})
 
-const pointLight3 = new THREE.PointLight(0x0400F5, 2)
+// Light 03
+
+const pointLight3 = new THREE.PointLight(0x000089, 2)
 pointLight3.position.set(-4.8,2.3,-6)
 pointLight3.intensity = 3.33
 
 scene.add(pointLight3)
 
-const lightAzul = gui.addFolder('Luz Azul')
+const light3 = gui.addFolder('Luz 03')
 
-lightAzul.add(pointLight3.position, 'y').min(-6).max(6).step(0.01)
-lightAzul.add(pointLight3.position, 'x').min(-6).max(6).step(0.01)
-lightAzul.add(pointLight3.position, 'z').min(-6).max(6).step(0.01)
-lightAzul.add(pointLight3, 'intensity').min(0).max(50).step(0.01)
+light3.add(pointLight3.position, 'y').min(-6).max(6).step(0.01)
+light3.add(pointLight3.position, 'x').min(-6).max(6).step(0.01)
+light3.add(pointLight3.position, 'z').min(-6).max(6).step(0.01)
+light3.add(pointLight3, 'intensity').min(0).max(50).step(0.01)
 
+const light3Color = {
+    color: 0x000089
+}
+
+light3.addColor(light3Color, 'color')
+.onChange(() => {
+    pointLight3.color.set(light3Color.color)
+})
 
 /**
  * Sizes
