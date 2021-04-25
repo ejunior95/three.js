@@ -20,6 +20,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    z-index: 10;
 }
 h1 {
     font-size: 8rem;
@@ -37,5 +38,5 @@ section {
     left: 0;
     outline: none;
     width: 100%;
-    mix-blend-mode: exclusion;
+    opacity: 90%;
 }
