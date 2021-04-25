@@ -22,7 +22,7 @@ const geometry = new THREE.SphereBufferGeometry(.5, 64, 64)
 // Materials
 
 const material = new THREE.MeshStandardMaterial()
-material.metalness = 0.7
+material.metalness = 0.9
 material.roughness = 0.2
 material.normalMap = normalTexture;
 material.color = new THREE.Color(0x292929)
@@ -31,31 +31,53 @@ material.color = new THREE.Color(0x292929)
 const sphere = new THREE.Mesh(geometry,material)
 scene.add(sphere)
 
-// Lights
+// Light White
 
 const pointLight = new THREE.PointLight(0xffffff, 0.1)
-pointLight.position.x = 2
-pointLight.position.y = 3
-pointLight.position.z = 4
+pointLight.position.set(3.89,6,-1.67)
+pointLight.intensity = 0.41
+
 scene.add(pointLight)
 
+const lightWhite = gui.addFolder('Luz Branca')
+
+lightWhite.add(pointLight.position, 'y').min(-6).max(6).step(0.01)
+lightWhite.add(pointLight.position, 'x').min(-6).max(6).step(0.01)
+lightWhite.add(pointLight.position, 'z').min(-6).max(6).step(0.01)
+lightWhite.add(pointLight, 'intensity').min(0).max(50).step(0.01)
+
+
+// Light Red
 
 const pointLight2 = new THREE.PointLight(0xff0000, 2)
-// pointLight2.position.x = 2
-// pointLight2.position.y = 3
-// pointLight2.position.z = 4
-pointLight2.position.set(1,1,1)
-pointLight2.intensity = 1
+pointLight2.position.set(6,-4.58,-3.65)
+pointLight2.intensity = 3.33
 
 scene.add(pointLight2)
 
-gui.add(pointLight2.position, 'y').min(-6).max(6).step(0.01)
-gui.add(pointLight2.position, 'x').min(-6).max(6).step(0.01)
-gui.add(pointLight2.position, 'z').min(-6).max(6).step(0.01)
-gui.add(pointLight2, 'intensity').min(0).max(10).step(0.01)
+const lightRed = gui.addFolder('Luz Vermelha')
 
-const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1)
-scene.add(pointLightHelper)
+lightRed.add(pointLight2.position, 'y').min(-6).max(6).step(0.01)
+lightRed.add(pointLight2.position, 'x').min(-6).max(6).step(0.01)
+lightRed.add(pointLight2.position, 'z').min(-6).max(6).step(0.01)
+lightRed.add(pointLight2, 'intensity').min(0).max(50).step(0.01)
+
+
+// Light Blue
+
+const pointLight3 = new THREE.PointLight(0x0400F5, 2)
+pointLight3.position.set(-4.8,2.3,-6)
+pointLight3.intensity = 3.33
+
+scene.add(pointLight3)
+
+const lightAzul = gui.addFolder('Luz Azul')
+
+lightAzul.add(pointLight3.position, 'y').min(-6).max(6).step(0.01)
+lightAzul.add(pointLight3.position, 'x').min(-6).max(6).step(0.01)
+lightAzul.add(pointLight3.position, 'z').min(-6).max(6).step(0.01)
+lightAzul.add(pointLight3, 'intensity').min(0).max(50).step(0.01)
+
 
 /**
  * Sizes
