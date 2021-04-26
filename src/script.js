@@ -50,8 +50,8 @@ scene.add(pointLight)
 // Light 02
 
 const pointLight2 = new THREE.PointLight(0xff0000, 2)
-pointLight2.position.set(6,-4.58,-3.65)
-pointLight2.intensity = 3.33
+pointLight2.position.set(-4.6,6,-3.6)
+pointLight2.intensity = 9.04
 
 scene.add(pointLight2)
 
@@ -74,8 +74,8 @@ scene.add(pointLight2)
 // Light 03
 
 const pointLight3 = new THREE.PointLight(0x000089, 2)
-pointLight3.position.set(-4.8,2.3,-6)
-pointLight3.intensity = 3.33
+pointLight3.position.set(6,-6,-6)
+pointLight3.intensity = 50
 
 scene.add(pointLight3)
 
