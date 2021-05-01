@@ -18,14 +18,14 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 // Objects
-const geometry = new THREE.SphereBufferGeometry(.7, 64, 64)
+const geometry = new THREE.SphereBufferGeometry(.9, 64, 64)
 // Materials
 
 const material = new THREE.MeshStandardMaterial()
-material.metalness = 0.5
-material.roughness = 0.2
+material.metalness = 0
+material.roughness = 0
 material.normalMap = normalTexture;
-material.color = new THREE.Color(0x292929)
+material.color = new THREE.Color(0x0097e6)
 
 // Mesh
 const sphere = new THREE.Mesh(geometry,material)
@@ -125,7 +125,7 @@ window.addEventListener('resize', () =>
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 0
 camera.position.y = 0
-camera.position.z = 2
+camera.position.z = 2.5
 scene.add(camera)
 
 // Controls
