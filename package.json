@@ -1,5 +1,8 @@
 {
-  "repository": "#",
+  "name": "primeiro-projeto-threejs",
+  "version": "0.0.2",
+  "description": "Projeto para estudo da tecnologia ThreeJS",
+  "repository": "https://github.com/ejunior95/three.js.git",
   "license": "UNLICENSED",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
@@ -25,5 +28,8 @@
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
