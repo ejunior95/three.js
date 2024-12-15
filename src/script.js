@@ -33,11 +33,11 @@ scene.add(sphere)
 
 // Light White
 
-const pointLight = new THREE.PointLight(0xffffff, 0.1)
-pointLight.position.set(3.89,6,-1.67)
-pointLight.intensity = 0.41
+// const pointLight = new THREE.PointLight(0xffffff, 0.1)
+// pointLight.position.set(3.89,6,-1.67)
+// pointLight.intensity = 0.41
 
-scene.add(pointLight)
+// scene.add(pointLight)
 
 // const lightWhite = gui.addFolder('Luz Branca')
 
@@ -49,9 +49,9 @@ scene.add(pointLight)
 
 // Light 02
 
-const pointLight2 = new THREE.PointLight(0xff0000, 2)
+const pointLight2 = new THREE.PointLight(0xFFFFFF, 2)
 pointLight2.position.set(-4.6,6,-3.6)
-pointLight2.intensity = 9.04
+pointLight2.intensity = 2
 
 scene.add(pointLight2)
 
@@ -73,9 +73,9 @@ scene.add(pointLight2)
 
 // Light 03
 
-const pointLight3 = new THREE.PointLight(0x000089, 2)
+const pointLight3 = new THREE.PointLight(0xFFFFFF, 2)
 pointLight3.position.set(6,-6,-6)
-pointLight3.intensity = 50
+pointLight3.intensity = 2
 
 scene.add(pointLight3)
 
@@ -158,7 +158,6 @@ const windowY = window.innerHeight / 2
 
 function onDocumentMouseMove(e) {
     mouseX = (e.clientX - windowX)
-    mouseY = (e.clientY - windowY)
 }
 
 const updateSphere = (e) => {
